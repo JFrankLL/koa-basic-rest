@@ -9,6 +9,6 @@ const schema = new Schema(
   },
 );
 
-const HomeModel = model('Documents', schema);
+const Model = model('Home', schema);
 
-module.exports = HomeModel;
+module.exports = Model;

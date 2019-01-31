@@ -1,5 +1,6 @@
 const Koa = require('koa');
 const logger = require('koa-logger');
+const bodyParser = require('koa-bodyparser');
 
 const db = require('./src/db/database');
 
@@ -21,7 +22,7 @@ if (process.env.NODE_ENV === 'development') {
   app.use(logger());
 }
 
-app.use(router());
+app.use(bodyParser()).use(router());
 
 // Fire it up
 db();
